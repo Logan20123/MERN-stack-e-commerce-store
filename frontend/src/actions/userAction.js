@@ -6,7 +6,7 @@ const { default: Axios } = require("axios");
 const signin=(email,password)=>async(dispatch)=>{
     dispatch({type:USER_SIGNIN_REQUEST, payload:{email,password}});
     try{
-        const{data} = await Axios.post("http://localhost:5000/api/users/signin",{email,password});
+        const{data} = await Axios.post("https://mern-stack-e-commerce-store.blackbearstore.repl.co/api/users/signin",{email,password});
         dispatch({type:USER_SIGNIN_SUCCESS,payload:data});
         Cookie.set("userInfo", JSON.stringify(data));
     }catch(error){
@@ -18,7 +18,7 @@ const signin=(email,password)=>async(dispatch)=>{
 const register=(name,email,password)=>async(dispatch)=>{
     dispatch({type:USER_REGISTER_REQUEST, payload:{name,email,password}});
     try{
-        const{data} = await Axios.post("http://localhost:5000/api/users/register",{name,email,password});
+        const{data} = await Axios.post("https://mern-stack-e-commerce-store.blackbearstore.repl.co/api/users/register",{name,email,password});
         dispatch({type:USER_REGISTER_SUCCESS,payload:data});
         Cookie.set("userInfo", JSON.stringify(data));
     }catch(error){

@@ -4,7 +4,7 @@ const { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_SHIPPING, CART_SAVE_PAYMENT} 
 
 const addToCart = (productId,qty)=>async (dispatch,getState)=>{
     try{
-        const{data}=await Axios.get("http://localhost:5000/api/products/"+productId);
+        const{data}=await Axios.get("https://mern-stack-e-commerce-store.blackbearstore.repl.co/api/products/"+productId);
         dispatch({type:CART_ADD_ITEM,payload:{
             product:data._id,
             name:data.name,
