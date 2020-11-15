@@ -12,3 +12,5 @@ Features included in this store:
 * A cart system to add multiple products in cart
 
 Front-end is made with React - Redux, server is made with Node/Express and database used in MongoDB/ mongoose.
+
+Added Selenium test in Python to test website in admin mode, and navigate theough online order process until checkout
